@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ApiTienTe.Entities
 {
@@ -23,7 +24,7 @@ namespace ApiTienTe.Entities
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TienTeData;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source = LAPTOP - 3E89SLDR\\SQLEXPRESS; Initial Catalog = TienTeData; Integrated Security = True; Persist Security Info = False; Pooling = False; Multiple Active Result Sets = False; Connect Timeout = 60; Encrypt = False; Trust Server Certificate = False; Command Timeout = 0");
             }
         }
 
